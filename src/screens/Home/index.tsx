@@ -3,6 +3,7 @@ import { styles } from "./styles"
 import { Button } from "../../components/Buttons"
 import { Input } from "../../components/Inputs"
 import { TaskList } from "../../components/TaskList"
+import { ScrollText } from "lucide-react-native"
 
 
 
@@ -34,7 +35,20 @@ export function Home() {
             </View>
 
             <View style={styles.sectionListTasks}>
-              <TaskList/>
+              <TaskList />
+
+              <View style={styles.sectionEmptyListTask}>
+                <ScrollText size={58} color="#333333" strokeWidth={1} />
+
+                <View>
+                  <Text style={styles.textEmptyListTaskBold}>
+                    Você ainda não tem tarefas cadastradas
+                  </Text>
+                  <Text style={styles.textEmptyListTaskRegular}>
+                    Crie tarefas e organize seus itens a fazer
+                  </Text>
+                </View>
+              </View>
             </View>
 
           </View>

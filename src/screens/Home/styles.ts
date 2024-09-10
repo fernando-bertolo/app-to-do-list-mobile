@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
   firstBackground: {
     backgroundColor: "#0D0D0D",
     width: "100%",
-    height: "25%",
+    height: "20%",
     justifyContent: "center",
     alignItems: "center"
   },
@@ -21,10 +21,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 4,
     position: "absolute",
-    transform: [{translateY: -40}, {translateX: 25}],
+    transform: [{ translateY: -35 }, { translateX: 25 }],
   },
   sectionTasks: {
-    marginTop: 32
+    marginTop: 32,
+    gap: 20
   },
   sectionCreatedAndDone: {
     width: "100%",
@@ -59,6 +60,23 @@ export const styles = StyleSheet.create({
   },
   sectionListTasks: {
     width: "100%",
-    backgroundColor: "blue"
+    borderTopWidth: 1,
+    borderColor: "#333333"
   },
+  sectionEmptyListTask: {
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    paddingVertical: 48,
+    paddingHorizontal: 20,
+    gap: 16
+  },
+  textEmptyListTaskBold: {
+    color: "#808080",
+    fontWeight: "bold"
+  },
+  textEmptyListTaskRegular: {
+    color: "#808080",
+    fontWeight: "regular"
+  }
 })
