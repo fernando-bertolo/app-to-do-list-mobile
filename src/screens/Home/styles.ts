@@ -61,7 +61,8 @@ export const styles = StyleSheet.create({
   sectionListTasks: {
     width: "100%",
     borderTopWidth: 1,
-    borderColor: "#333333"
+    borderColor: "#333333",
+    paddingVertical: 32
   },
   sectionEmptyListTask: {
     width: "100%",

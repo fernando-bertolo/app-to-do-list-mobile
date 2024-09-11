@@ -8,20 +8,22 @@ export const styles = StyleSheet.create({
     borderColor: "#333333",
     borderWidth: 1,
     backgroundColor: "#262626",
-    marginTop: 48,
     flexDirection: "row",
-    padding: 12,
+    padding: 16,
     gap: 8,
-    justifyContent: "space-around",
-    alignItems: "center"
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 16
   },
   taskText: {
-    color: "#FFF"
+    color: "#FFF",
+    textAlign: "left"
   },
   taskTextStrike: {
     color: "#A9A9A9",
     textDecorationLine: 'line-through',
     textDecorationStyle: 'solid',
+    textAlign: "left"
   }
 
 })

@@ -4,16 +4,33 @@ import { Trash2 } from "lucide-react-native";
 import { CheckBox } from "../Checkbox";
 import { useState } from "react";
 
-export function TaskList() {
+type taskListProps = {
+  descriptionTask: string,
+  setQuantityTasksDone: (value: number) => void,
+  quantityTasksDone: number,
+  onRemove: () => void
+}
+
+export function TaskList({
+  descriptionTask,
+  setQuantityTasksDone,
+  quantityTasksDone,
+  onRemove
+}: taskListProps) {
   const [isChecked, setIsChecked] = useState<boolean>(false);
-
-
 
   return (
     <View style={styles.container}>
-      <CheckBox isChecked={isChecked} setIsChecked={setIsChecked}/>
-      <Text style={!isChecked ? styles.taskText : styles.taskTextStrike}>Descrição da tarefa aqui</Text>
-      <Trash2 size={24} color="#FFF" strokeWidth={1} />
+      <CheckBox
+        isChecked={isChecked}
+        setIsChecked={setIsChecked}
+        setQuantityTasksDone={setQuantityTasksDone}
+        quantityTasksDone={quantityTasksDone}
+      />
+      <Text style={!isChecked ? styles.taskText : styles.taskTextStrike}>
+        {descriptionTask}
+      </Text>
+      <Trash2 size={24} color="#FFF" strokeWidth={1} onPress={onRemove} />
     </View>
   )
 }
