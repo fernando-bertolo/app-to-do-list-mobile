@@ -21,12 +21,7 @@ export function Home() {
   }
 
   function removeTask(descricao: string){
-    Alert.alert('Remover', 'Deseja remover esta tarefa?', [
-      {
-        text: 'Sim',
-        onPress: () => setListTasks(prevState => prevState.filter(descricao => descricao !== listTaskName))
-      }
-    ])
+    setListTasks(prevState => prevState.filter(descricaoAtual => descricaoAtual !== descricao))
   }
 
   return (

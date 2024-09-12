@@ -1,4 +1,4 @@
-import { TextInput, View, Text } from "react-native";
+import { TextInput, View, Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import { Trash2 } from "lucide-react-native";
 import { CheckBox } from "../Checkbox";
@@ -30,7 +30,9 @@ export function TaskList({
       <Text style={!isChecked ? styles.taskText : styles.taskTextStrike}>
         {descriptionTask}
       </Text>
-      <Trash2 size={24} color="#FFF" strokeWidth={1} onPress={onRemove} />
+      <TouchableOpacity onPress={onRemove}>
+        <Trash2 size={24} color="#FFF" strokeWidth={1} />
+      </TouchableOpacity>
     </View>
   )
 }
